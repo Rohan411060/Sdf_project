@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Report a Found Item - Campus Lost & Found</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <header class="sticky top-0 z-50 flex items-center justify-center border-b border-gray-200/50 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+        <div class="flex w-full max-w-7xl items-center justify-between whitespace-nowrap px-4 py-3 md:px-8">
+            <div class="flex items-center gap-4">
+                <div class="text-primary size-7">
+                    <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <h2 class="text-lg font-bold tracking-tight text-gray-900 dark:text-white">Campus Lost & Found</h2>
+            </div>
+            <div class="hidden flex-1 items-center justify-end gap-6 md:flex">
+                <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Lost Items</a>
+                <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Found Items</a>
+                <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">My Posts</a>
+                <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-wide shadow-sm hover:opacity-90">
+                    <span class="truncate">Log In</span>
+                </button>
+            <button class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+    <main class="flex w-full flex-1 justify-center py-8 sm:py-12 md:py-16">
+        <div class="flex w-full max-w-3xl flex-col px-4">
+            <div class="flex flex-col gap-2 mb-8">
+                <h1 class="text-3xl font-black tracking-tighter text-gray-900 dark:text-white sm:text-4xl">Report a Found Item</h1>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    Thank you for doing the right thing! Please provide details about the item you found and where you found it.
+                </p>
+            </div>
+            <div class="flex flex-col gap-10">
+                <div class="flex flex-col">
+                    <h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white pb-4 border-b border-gray-200 dark:border-white/10">About the Item</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 pt-6">
+                        <label class="flex flex-col col-span-1 md:col-span-2">
+                            <p class="text-sm font-medium pb-2 text-gray-700 dark:text-gray-300">Item Title</p>
+                            <input class="form-input w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary focus:ring-primary h-12 px-4 text-base" placeholder="e.g., Milton Flask Water Bottle" value=""/>
+                        </label>
+                        <label class="flex flex-col">
+                            <p class="text-sm font-medium pb-2 text-gray-700 dark:text-gray-300">Item Category</p>
+                            <select class="form-select w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-gray-800 text-gray-900 dark:text-white focus:border-primary focus:ring-primary h-12 px-4 text-base">
+                                <option>Select a category</option>
+                                <option>Electronics</option>
+                                <option>Wallet</option>
+                                <option>Keys</option>
+                                <option>ID cards</option>
+                                <option>Clothing</option>
+                                <option>Books</option>
+                                <option>Other</option>
+                            </select>
+                        </label>
+                        <label class="flex flex-col col-span-1 md:col-span-2">
+                            <p class="text-sm font-medium pb-2 text-gray-700 dark:text-gray-300">Detailed Description</p>
+                            <textarea class="form-textarea w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary focus:ring-primary p-4 text-base" placeholder="Describe color, brand, size, and any distinguishing marks..." rows="4"></textarea>
+                        </label>
+                        <div class="flex flex-col col-span-1 md:col-span-2">
+                            <p class="text-sm font-medium pb-2 text-gray-700 dark:text-gray-300">Upload Photo (Optional)</p>
+                            <div class="flex items-center justify-center w-full">
+                                <label class="flex flex-col items-center justify-center w-full h-48 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-800/50 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-800/80 transition-colors">
+                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <span class="material-symbols-outlined text-4xl text-gray-500 dark:text-gray-400">cloud_upload</span>
+                                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                                    </div>
+                                    <input class="hidden" type="file"/>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white pb-4 border-b border-gray-200 dark:border-white/10">Found details</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 pt-6">
+                        <label class="flex flex-col col-span-1 md:col-span-2">
+                            <p class="text-sm font-medium pb-2 text-gray-700 dark:text-gray-300">Location</p>
+                            <input class="form-input w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary focus:ring-primary h-12 px-4 text-base" placeholder="e.g., A405 Classroom or CSD 201B Lab" value=""/>
+                        </label>
+                        <label class="flex flex-col">
+                            <p class="text-sm font-medium pb-2 text-gray-700 dark:text-gray-300">Date</p>
+                            <input class="form-input w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary focus:ring-primary h-12 px-4 text-base" type="date"/>
+                        </label>
+                        <label class="flex flex-col">
+                            <p class="text-sm font-medium pb-2 text-gray-700 dark:text-gray-300">Time (Approximate)</p>
+                            <input class="form-input w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary focus:ring-primary h-12 px-4 text-base" type="time"/>
+                        </label>
+                        </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white pb-4 border-b border-gray-200 dark:border-white/10">Your Contact Info</h2>
+                    <p class="text-xs pt-4 text-gray-500 dark:text-gray-400">Your contact information will only be used to contact you if the owner is found.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 pt-6">
+                        <label class="flex flex-col">
+                            <p class="text-sm font-medium pb-2 text-gray-700 dark:text-gray-300">Full Name</p>
+                            <input class="form-input w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary focus:ring-primary h-12 px-4 text-base" placeholder="Adam Jones" value=""/>
+                        </label>
+                        <label class="flex flex-col">
+                            <p class="text-sm font-medium pb-2 text-gray-700 dark:text-gray-300">Phone Number (Optional)</p>
+                            <input class="form-input w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary focus:ring-primary h-12 px-4 text-base" placeholder="(123) 456-7890" value=""/>
+                        </label>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-end gap-4 pt-6 border-t border-gray-200 dark:border-white/10">
+                    <button class="w-full sm:w-auto flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-gray-200 dark:bg-gray-700/50 text-gray-800 dark:text-gray-200 text-base font-bold leading-normal tracking-wide shadow-sm hover:bg-gray-300 dark:hover:bg-gray-700">
+                        <span class="truncate">Cancel</span>
+                    </button>
+                    <button class="w-full sm:w-auto flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-wide shadow-sm hover:opacity-90">
+                        <span class="truncate">Submit Found Item Report</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="flex w-full justify-center border-t border-gray-200/50 dark:border-white/10 bg-background-light dark:bg-background-dark">
+        <div class="flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row md:px-8">
+            <p class="text-sm text-gray-500 dark:text-gray-400">© 2024 Campus Lost & Found. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+                <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">FAQs</a>
+                <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Contact Us</a>
+                <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html
